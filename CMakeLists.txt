@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(fmt CONFIG REQUIRED)
 
-add_executable(Main main.cc)
+add_executable(Main src/main.cc)
 
 target_link_libraries(Main
     fmt::fmt
