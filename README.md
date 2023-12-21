@@ -5,11 +5,14 @@
   |-- .vscode/                   
   |   |-- c_cpp_properties.json
   |   |-- settings.json
-  |-- build/
+  |-- src/
+  |   |-- main.cc
   |-- CMakeLists.txt
   |-- CMakePresets.txt
   |-- README.md
-  |-- main.cc
+  |-- LICENSE
+  |-- vcpkg.json
+  |-- vcpkg-configuration.json
 ```
 
 ### tool-chain for building
