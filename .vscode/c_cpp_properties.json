@@ -1,0 +1,10 @@
+{
+  "configurations": [{
+      "name": "Linux",
+      "includePath": [
+          "${workspaceFolder}/**",
+          "/usr/include/**"  
+      ]
+  }],
+  "version": 4
+}
