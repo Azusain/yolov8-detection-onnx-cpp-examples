@@ -2,8 +2,8 @@
 This repository contains work on performing inference with the ONNX Runtime APIs.  
 
 ### Progress
-- basic yolov8 detection tasks on cpu
-- utiltizing more hardware-accelerated APIs(TensorRT or CUDA) before the next century
+- basic yolov8 detection tasks on cpu ✔️
+- utiltizing more hardware-accelerated APIs(TensorRT or CUDA) before the next century ❓
 
 ### NOTES!
 you will have to download the .onnx format model personally cuz the file too large :D
