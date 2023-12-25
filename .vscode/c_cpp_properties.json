@@ -3,7 +3,8 @@
       "name": "Linux",
       "includePath": [
           "${workspaceFolder}/**",
-          "/usr/include/**"  
+          "/usr/include/**",
+          "/usr/local/include/opencv4/**"  
       ]
   }],
   "version": 4
