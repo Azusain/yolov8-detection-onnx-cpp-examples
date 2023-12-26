@@ -23,3 +23,5 @@ thanks for the examples from these guys:
 - stackoverflow https://stackoverflow.com/questions/65379070/how-to-use-onnx-model-in-c-code-on-linux
 
 - Li-99's repo https://github.com/Li-99/yolov8_onnxruntime.git
+
+ - azusaings@gmail.com
