@@ -3,16 +3,18 @@ This repository contains work on performing inference with the ONNX Runtime APIs
 
 ### Progress
 - basic yolov8 detection tasks on cpu ✔️
+- option for default cuda settings ✔️
+- studying on enabling io-bindings... ❓
 - utiltizing more hardware-accelerated APIs(TensorRT or CUDA) before the next century ❓
 
 ### NOTES!
 you will have to download the .onnx format model personally cuz the file too large :D
 
 
-### tool-chain for building
+### Build
 - gcc
 - cmake
-- vcpkg
+- vcpkg (optional)
 
 ### Reference
 thanks for the examples from these guys:

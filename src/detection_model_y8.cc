@@ -1,11 +1,18 @@
 #include "detection_model_y8.h"
 
 DetectionModelYolov8::DetectionModelYolov8(
-    std::string_view model_path, 
-    Ort::SessionOptions opts
-  ):
-    ONNXModel(model_path, std::move(opts))
-  {}
+  std::string_view model_path, 
+  bool enable_gpu
+):
+  ONNXModel()
+{
+  Ort::SessionOptions opts;
+  if(enable_gpu) {
+    OrtCUDAProviderOptions cuda_opts;
+    opts.AppendExecutionProvider_CUDA(cuda_opts);
+  }
+  this->Load(model_path, std::move(opts));
+}
 
 std::unordered_map<int, std::vector<DetectionModelYolov8::Result>> DetectionModelYolov8::Predict(
   const cv::Mat& img, 
@@ -115,7 +122,6 @@ std::unordered_map<int, std::vector<DetectionModelYolov8::Result>> DetectionMode
       results_map.emplace(res.id, std::vector<Result>{res});
     }
   }
-  
   return results_map;
 }
 

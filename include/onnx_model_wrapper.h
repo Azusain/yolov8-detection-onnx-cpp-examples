@@ -3,16 +3,19 @@
 #include <vector>
 #include <onnxruntime_cxx_api.h>
 #include <string_view>
+#include <memory>
 
 class ONNXModel {
 protected:
-  ONNXModel(std::string_view model_path, Ort::SessionOptions options={});
+  ONNXModel();
+
+  void Load(std::string_view model_path, Ort::SessionOptions options={});
 
   std::vector<Ort::Value> Run(std::vector<std::vector<float>> input_tensors_data, 
     Ort::RunOptions opts={}); 
 
   Ort::Env env_;
-  Ort::Session session_;
+  std::unique_ptr<Ort::Session> session_ptr_;
   Ort::MemoryInfo mem_info_;
   Ort::AllocatorWithDefaultOptions allocator_;
   std::vector<Ort::Value> input_tensors_;

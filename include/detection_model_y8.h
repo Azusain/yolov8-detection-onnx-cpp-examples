@@ -21,7 +21,7 @@ public:
     float width;
   };
 
-  DetectionModelYolov8(std::string_view model_path, Ort::SessionOptions opt={});
+  DetectionModelYolov8(std::string_view model_path, bool enable_gpu=false);
 
   std::unordered_map<int, std::vector<Result>> Predict(
     const cv::Mat& img, float conf_threshhold=0.4, float iou_threshhold=0.4);
