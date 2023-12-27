@@ -26,4 +26,3 @@ thanks for the examples from these guys:
 
 - Li-99's repo https://github.com/Li-99/yolov8_onnxruntime.git
 
- - azusaings@gmail.com
